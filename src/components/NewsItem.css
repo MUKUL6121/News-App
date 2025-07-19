@@ -1,0 +1,114 @@
+/* Container for all news items */
+#newscontainer {
+    width: 100%;
+    margin: 0 auto; /* Center container */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px; /* Space between items */
+    padding: 10px; /* Padding inside the container */
+    background-color: #f9f9f9; /* Light background color */
+}
+
+#newsItem {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    overflow: hidden; /* Ensures children don’t overflow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: box-shadow 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+    padding: 15px; /* Padding inside each news item */
+}
+
+#newsItem:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+#img {
+    width: 100%;
+    height: auto;
+    background-color: #f0f0f0; /* Lighter background for images */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px; /* Space below the image */
+}
+
+#image {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensure image covers the area without distortion */
+    border-bottom: 1px solid #ddd; /* Border between image and text */
+}
+
+#box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 30px;
+}
+
+#box_heading {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: left;
+    line-height: 1.4;
+    align-self: center;
+    justify-self: center;
+    padding-top: 40px;
+}
+
+#box_desc {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+a {
+    color: #007bff; /* Bootstrap blue color */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s; /* Smooth transition for link color */
+}
+
+a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+@media (max-width: 768px) {
+    #newsItem {
+        flex-direction: column; /* Stack image and text vertically on small screens */
+    }
+
+    #img {
+        width: 100%;
+        height: auto; /* Adjust height for smaller screens */
+    }
+
+    #box {
+        width: 100%;
+    }
+
+    #box_heading {
+        font-size: 16px;
+    }
+
+    #box_desc {
+        font-size: 12px;
+    }
+}
+
+/*for box-container*/
+/* Date Styling */
+#date {
+    font-size: 10px; /* Set the font size of the date */
+    color: #999; /* Optional: lighter color for the date text */
+    text-align: right; /* Align the date to the right */
+    margin-top: 5px; /* Optional: Add some space above the date */
+    margin-bottom: 10px; /* Optional: Add some space below the date */
+    display: block; /* Ensure it takes up the full width within its container */
+}

@@ -1,0 +1,93 @@
+/* Main Container */
+.main {
+  display: inline-flex;
+  flex-wrap: wrap;
+  height: 592px;
+  width: 1263px;
+  text-align: center;
+}
+
+/* Header */
+.header {
+  height: 10%;
+  width: 100%;
+}
+
+/* Status Dot */
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 10px;
+}
+.online {
+  background-color: red;
+}
+
+/* Sidebar */
+.sidebar {
+  height: 80%;
+  width: 15%;
+  max-height: auto;
+}
+
+/* Breaking News */
+.breaking-news {
+  display: none;
+}
+
+/* Content Area */
+.content {
+  height: auto;
+  width: 85%;
+  max-height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: auto;
+}
+
+/* Footer */
+.footer {
+  max-height: auto;
+  width: 100%;
+  background-color: cornflowerblue;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .main {
+    height: auto;
+    width: 375px;
+    flex-direction: column;
+  }
+
+  .header {
+    width: 100%;
+  }
+
+  .sidebar {
+    height: 70px;
+    width: 100%;
+    display: none;
+  }
+
+  .breaking-news {
+    font-size: 25px;
+    font-weight: 500;
+    color: red;
+    margin-bottom: -10px;
+    display: block;
+  }
+
+  .content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .footer {
+    height: auto;
+    width: auto;
+  }
+}

@@ -1,0 +1,14 @@
+.sidebar-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .sidebar-list li {
+    margin: 8px 0;
+    font-weight: 500;
+    font-family: monospace;
+    text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14, 
+               0 0 30px #39ff14, 0 0 40px #39ff14, 0 0 50px #39ff14, 
+               0 0 60px #39ff14; /* Glowing effect */
+  }
+  
