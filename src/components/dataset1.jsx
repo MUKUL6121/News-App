@@ -15,10 +15,14 @@ function Dataset({ query }) {
   const fetchWithRetry = useCallback(async (url, retries = 5, backoff = 1000) => {
     try {
       const response = await fetch(url, {
-        headers: {
-          'User-Agent': 'Mozilla/5.0',
-          'Accept': 'application/json'
-        }
+         method: 'GET', // or 'POST', 'PUT', etc.
+         headers: {
+          'Content-Type': 'application/json',
+          'Upgrade': 'websocket',         // Only if the server expects a protocol upgrade
+          'Connection': 'Upgrade',        // Required with 'Upgrade'
+          // Add more headers as needed
+          // 'Authorization': 'Bearer YOUR_TOKEN' 
+  }
       });
       if (response.status === 401) {
         throw new Error('Unauthorized: Please check your API key.');
