@@ -14,7 +14,12 @@ function Dataset({ query }) {
   // Function to fetch data with retry logicn
   const fetchWithRetry = useCallback(async (url, retries = 5, backoff = 1000) => {
     try {
-      const response = await fetch(url);
+      const response = await fetch(url, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0',
+          'Accept': 'application/json'
+        }
+      });
       if (response.status === 401) {
         throw new Error('Unauthorized: Please check your API key.');
       }
